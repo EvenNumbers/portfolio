@@ -1,0 +1,523 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #6b7280;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3b82f6;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-link.active {
+    color: #e88c03;
+    font-weight: 700;
+    border-bottom: 2px solid #3b82f6;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 140px 10% 100px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.blue {
+    color: #00bfff;
+    font-weight: 700;
+}
+
+.orange {
+    color: #f9a825;
+    font-weight: 700;
+}
+
+.black {
+    color: #000;
+    font-weight: 900;
+}
+
+.btn-cv {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.btn-cv:hover {
+    background-color: #333;
+}
+
+.hero-image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image-row {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+}
+
+.profile-image {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.profile-image.left {
+    left: 0;
+    transform: scale(0.9);
+    z-index: 1;
+}
+
+.profile-image.center {
+    left: 200px;
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.profile-image.right {
+    left: 400px;
+    transform: scale(0.9);
+    z-index: 1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-stack {
+        width: 80%;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .profile-image {
+        width: 100%;
+    }
+}
+
+/* ========================= */
+/* ABOUT PAGE STYLES BELOW  */
+/* ========================= */
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 140px 10% 4rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-color: #f9fafb;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    padding-right: 20px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.about-text strong {
+    font-weight: 700;
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-text li {
+    margin-bottom: 0.5rem;
+}
+
+.hashtag {
+    color: #ff7b00;
+    font-weight: 700;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #555;
+    background: #111;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        padding: 140px 5% 4rem;
+    }
+
+    .about-text,
+    .about-image {
+        max-width: 100%;
+    }
+
+    .about-image {
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 90%;
+    }
+}
+
+
+/* ===================== */
+/* SKILLS PAGE STYLING   */
+/* ===================== */
+
+.skills-section {
+  padding: 4rem 2rem;
+  padding-top: 8rem; /* Add only to the top */
+  text-align: center;
+}
+
+
+.skills-title {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* aligns vertically */
+  gap: 1rem;
+  flex-wrap: wrap;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.highlight-orange {
+  color: #f97316;
+  transform: rotate(-90deg);
+  font-size: 6.5rem;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 10rem; /* match height of SKILLS letters */
+  margin-right: -4rem; /* adjust spacing between MY and S */
+
+}
+
+
+
+.image-filled-text {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ski {
+  background-image: url('creativity.webp'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  font-size: 10rem;
+}
+
+.lls {
+  background-image: url('even.jpg'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  font-size: 10rem;
+}
+
+.skills-quote {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+}
+
+.tools-platforms {
+  margin-top: 6rem; /* Increased from 4rem */
+  margin-bottom: 4rem; /* Add spacing after */
+}
+
+.tools-platforms h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.tools-platforms p {
+  color: #666;
+  margin: 0.5rem 0 4rem;
+}
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tool {
+  background-color: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.traits-section {
+  padding: 6rem 2rem; /* Was 4rem */
+  text-align: center;
+  background-color: #fff;
+}
+
+
+.traits-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.traits-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.traits-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.trait-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 260px;
+  text-align: left;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.trait-card:hover {
+  transform: translateY(-5px);
+}
+
+.trait-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.trait-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.trait-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2.5rem;
+    flex-direction: column;
+  }
+
+  .tools-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hard-skills-section {
+  padding: 6rem 2rem; /* Was 4rem */
+  text-align: center;
+  background-color: #f9fafb;
+}
+
+
+.hard-skills-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hard-skills-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.hard-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hard-skill {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 260px;
+  padding: 1.5rem 1rem;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.hard-skill:hover {
+  transform: translateY(-5px);
+}
+
+.hard-skill h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.hard-skill p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hard-skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hard-skill {
+    width: 90%;
+  }
+}
+

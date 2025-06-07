@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Even - Contact</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .contact-card {
+      flex: 1;
+      min-width: 280px;
+      max-width: 500px;
+      padding: 30px;
+      background-color: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-card h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contact-card li {
+      margin: 15px 0;
+    }
+
+    .contact-card a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #6b7280;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .contact-card a:hover {
+      color: #3b82f6;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-brand">Even | UI</div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="skills.html" class="nav-link">Skills</a></li>
+        <li><a href="contacts.html" class="nav-link active">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="hero" style="padding-top: 140px;">
+    <div class="contact-container">
+      
+      <!-- Social Media -->
+      <div class="contact-card">
+        <h2 class="hero-title">Social Media</h2>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/share/19MLd91SvF/" target="_blank">
+              <i class="fab fa-facebook fa-lg" style="color:#3b5998;"></i> Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/hey.its_even?igsh=eTkyZHprYzQ0ZDZ6" target="_blank">
+              <i class="fab fa-instagram fa-lg" style="color:#e1306c;"></i> Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@evennnumbers?_t=ZS-8wkKwDrdZAO&_r=1" target="_blank">
+              <i class="fab fa-tiktok fa-lg" style="color:#000;"></i> TikTok
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Direct Contact -->
+      <div class="contact-card">
+        <h2 class="hero-title">Direct Contact</h2>
+        <ul>
+          <li>
+            <a href="mailto:mendozarieven6@gmail.com">
+              <i class="fas fa-envelope fa-lg" style="color:#d93025;"></i> mendozarieven6@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="tel:+639468447500">
+              <i class="fas fa-phone fa-lg" style="color:#34a853;"></i> +63 946 844 7500
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Even - Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-brand">Even | UI</div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="skills.html" class="nav-link">Skills</a></li>
+        <li><a href="contacts.html" class="nav-link">Contacts</a></li>
+      </ul>
+      <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Hi I’m <span style="color:#00bfff; font-family: 'Poppins', sans-serif;">Rieven Mendoza</span><br>
+          An aspiring <span class="blue">UI | UX</span> <span class="black">DESIGNER</span> AND <span class="orange">FRONTEND</span> <span class="black">DEVELOPER</span>
+        </h1>
+        <a href="cv.pdf" class="btn-cv" download="Rieven-Mendoza-CV.pdf">Download my CV</a>
+      </div>
+        <div class="image-row">
+  <img src="even.jpg" alt="Rieven" class="profile-image center">
+  <img src="even.jpg" alt="Rieven" class="profile-image left">
+  <img src="even.jpg" alt="Rieven" class="profile-image right">
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- JS at end -->
+  <script>
+  const images = document.querySelectorAll('.profile-image');
+
+  images.forEach(image => {
+    image.addEventListener('click', () => {
+      if (image.classList.contains('center')) return;
+
+      // Find the current center, left, and right
+      const center = document.querySelector('.profile-image.center');
+      const left = document.querySelector('.profile-image.left');
+      const right = document.querySelector('.profile-image.right');
+
+      // Swap based on which image was clicked
+      if (image.classList.contains('left')) {
+        center.classList.remove('center');
+        center.classList.add('right');
+
+        image.classList.remove('left');
+        image.classList.add('center');
+
+        right.classList.remove('right');
+        right.classList.add('left');
+      } else if (image.classList.contains('right')) {
+        center.classList.remove('center');
+        center.classList.add('left');
+
+        image.classList.remove('right');
+        image.classList.add('center');
+
+        left.classList.remove('left');
+        left.classList.add('right');
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
